@@ -78,4 +78,7 @@ GROUP BY needs a column or expression from the row set, not an aggregate like MA
         FROM EMPLOYEE) ) 
 Q. WEATHER OBSERVATION STAITON 2 https://www.hackerrank.com/challenges/weather-observation-station-2/problem?isFullScreen=true
 SUM DONT TAKE SUBQUERY AS THEIR ARGUMENT
-
+Q WEATHER OBSERVATION 16: https://www.hackerrank.com/challenges/weather-observation-station-16/problem?isFullScreen=true
+SELECT ROUND(MIN(LAT_N),4)
+ FROM STATION
+WHERE LAT_N> 38.7780;
