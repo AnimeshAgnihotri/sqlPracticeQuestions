@@ -76,9 +76,19 @@ GROUP BY needs a column or expression from the row set, not an aggregate like MA
         FROM EMPLOYEE 
             WHERE SALARY*MONTHS= (SELECT MAX(SALARY*MONTHS)  
         FROM EMPLOYEE) ) 
-Q. WEATHER OBSERVATION STAITON 2 https://www.hackerrank.com/challenges/weather-observation-station-2/problem?isFullScreen=true
-SUM DONT TAKE SUBQUERY AS THEIR ARGUMENT
+
 Q WEATHER OBSERVATION 16: https://www.hackerrank.com/challenges/weather-observation-station-16/problem?isFullScreen=true
 SELECT ROUND(MIN(LAT_N),4)
  FROM STATION
 WHERE LAT_N> 38.7780;
+Q WEATHER OBSERVATION 17: https://www.hackerrank.com/challenges/weather-observation-station-17/problem?isFullScreen=true
+SELECT ROUND(LONG_W,4)
+FROM STATION
+WHERE LAT_N=(SELECT MIN(LAT_N) 
+FROM STATION 
+WHERE LAT_N>38.7780);
+
+Q: WEATHER OBSERVATION 18: https://www.hackerrank.com/challenges/weather-observation-station-18/problem?isFullScreen=true
+SELECT ROUND(ABS(MIN(LAT_N)-MAX(LAT_N)+MIN(LONG_W)-MAX(LONG_W)),4)
+FROM STATION;
+--ABS CALCULATES ABSOLUTE VALUE
