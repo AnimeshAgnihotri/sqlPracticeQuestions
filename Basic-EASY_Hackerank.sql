@@ -92,3 +92,9 @@ Q: WEATHER OBSERVATION 18: https://www.hackerrank.com/challenges/weather-observa
 SELECT ROUND(ABS(MIN(LAT_N)-MAX(LAT_N)+MIN(LONG_W)-MAX(LONG_W)),4)
 FROM STATION;
 --ABS CALCULATES ABSOLUTE VALUE
+Q.POPULATION CENSUS: https://www.hackerrank.com/challenges/asian-population/problem?isFullScreen=true
+select SUM(CITY.population )
+from CITY
+JOIN COUNTRY
+ON CITY.CountryCode=COUNTRY.Code
+where CONTINENT='ASIA'
