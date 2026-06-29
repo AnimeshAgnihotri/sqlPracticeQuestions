@@ -51,4 +51,8 @@ The outer SELECT just shows both values together.
 Easy rule
 If the subquery is giving back a single answer, it is scalar. If the main query needs rows from the table, put FROM employee in the outer query; if the subquery needs to calculate a value from the table, put FROM employee inside the subquery.
 
-
+MIN() and MAX() are aggregate functions and cannot be used directly in the WHERE clause like that.
+POWER() requires two arguments: POWER(value, exponent).
+To calculate the Euclidean distance between the points:
+(MIN(LAT_N), MIN(LONG_W))
+(MAX(LAT_N), MAX(LONG_W))
