@@ -55,4 +55,4 @@ MIN() and MAX() are aggregate functions and cannot be used directly in the WHERE
 POWER() requires two arguments: POWER(value, exponent).
 To calculate the Euclidean distance between the points:
 (MIN(LAT_N), MIN(LONG_W))
-(MAX(LAT_N), MAX(LONG_W))
+(MAX(LAT_N), MAX(LONG_W)).
