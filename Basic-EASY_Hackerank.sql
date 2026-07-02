@@ -104,3 +104,25 @@ SELECT CITY.NAME FROM CITY
 JOIN COUNTRY
 ON CITY.CountryCode = COUNTRY.Code
 WHERE CONTINENT='Africa';
+
+Q. AVERAGE POPULATION OF EACH CONTINENT: https://www.hackerrank.com/challenges/average-population-of-each-continent/problem?isFullScreen=true
+SELECT COUNTRY.CONTINENT,
+       FLOOR(AVG(CITY.POPULATION))
+FROM CITY
+JOIN COUNTRY
+ON CITY.COUNTRYCODE = COUNTRY.CODE
+GROUP BY COUNTRY.CONTINENT;
+ 
+--INSTEAD OF AS INT WE USED AS SIGNED, SOME COMPILER TAKES ONLY SIGNED, FLOOR WAS USED BECAUSE IT MATCHED THE OUTPUT, FLOOR TAKES THE NEAREST DOWN VALUE
+Q. WEATHER OBSERVATION 19: Weather Observation Station 19 | HackerRank
+SELECT ROUND( sqrt(power(min(LAT_N)-MAX(LAT_N),2)+power(MIN(LONG_W)-MAX(LONG_W),2)),4)
+from   STATION;
+
+Q. New companies: New Companies | HackerRank
+/*group by whenever used, make sure in select aggr function is there if not then put that particular select in group by, here it is company.founder*/
+ 
+SELECT  Employee.company_code, Company.founder,COUNT(DISTINCT(lead_manager_code)), COUNT(DISTINCT(senior_manager_code)), COUNT(DISTINCT(manager_code)),COUNT(DISTINCT(employee_code))
+FROM Employee join Company
+on Employee.company_code=Company.company_code
+group by Company.company_code, Company.founder
+order by Company.company_code;
