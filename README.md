@@ -1,5 +1,5 @@
-# sqlPracticeQuestions
-MAKE ME UNDERSTAND SCALAR QUERY AND WHEN CAN WE USE FROM EMPLOYEE INSIDE AND WHEN TO USE IT OUTSIDE
+
+//MAKE ME UNDERSTAND SCALAR QUERY AND WHEN CAN WE USE FROM EMPLOYEE INSIDE AND WHEN TO USE IT OUTSIDE
 A scalar subquery is a subquery that returns exactly one value: one row and one column. Think of it like a tiny result that you can place wherever SQL expects a single value, such as in SELECT, WHERE, HAVING, or ORDER BY.
 
 Simple idea
@@ -13,7 +13,7 @@ one date,
 
 then a scalar subquery is the right kind of subquery. A common example is SELECT AVG(salary) FROM employee, because AVG() returns one value.
 
-Where FROM EMPLOYEE goes
+//Where FROM EMPLOYEE goes
 FROM EMPLOYEE belongs inside the subquery when that inner query needs to read from the table. For example:
 
 sql
@@ -51,8 +51,11 @@ The outer SELECT just shows both values together.
 Easy rule
 If the subquery is giving back a single answer, it is scalar. If the main query needs rows from the table, put FROM employee in the outer query; if the subquery needs to calculate a value from the table, put FROM employee inside the subquery.
 
-MIN() and MAX() are aggregate functions and cannot be used directly in the WHERE clause like that.
+//MIN() and MAX() are aggregate functions and cannot be used directly in the WHERE clause like that.
 POWER() requires two arguments: POWER(value, exponent).
 To calculate the Euclidean distance between the points:
 (MIN(LAT_N), MIN(LONG_W))
 (MAX(LAT_N), MAX(LONG_W)).
+
+
+//The TIMESTAMPDIFF() function returns the result of subtracting the first datetime expression from the second datetime expression (datetime_expr2 - datetime_expr1) expressed as an integer in the specified unit.
