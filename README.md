@@ -1,4 +1,4 @@
-SQL TIPS AND KNOWLEDGE 
+*SQL TIPS AND KNOWLEDGE* 
 //MAKE ME UNDERSTAND SCALAR QUERY AND WHEN CAN WE USE FROM EMPLOYEE INSIDE AND WHEN TO USE IT OUTSIDE
 A scalar subquery is a subquery that returns exactly one value: one row and one column. Think of it like a tiny result that you can place wherever SQL expects a single value, such as in SELECT, WHERE, HAVING, or ORDER BY.
 
