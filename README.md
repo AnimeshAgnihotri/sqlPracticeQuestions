@@ -59,3 +59,7 @@ To calculate the Euclidean distance between the points:
 
 
 //The TIMESTAMPDIFF() function returns the result of subtracting the first datetime expression from the second datetime expression (datetime_expr2 - datetime_expr1) expressed as an integer in the specified unit.
+
+
+concat(string, string, string) // can concat multiple string 
+[insert example from hacker rank]
