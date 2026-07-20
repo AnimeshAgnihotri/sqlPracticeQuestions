@@ -63,3 +63,5 @@ To calculate the Euclidean distance between the points:
 
 concat(string, string, string) // can concat multiple string 
 [insert example from hacker rank]
+
+sum(max) means nothing since max is one value, so if we get a question where we need to calculate sum of only max values then we need to first group that, in this one column will be max values obtained, then in next query, we sum them, we can use cte here, group by here.
